@@ -13,7 +13,7 @@ async function getJoke() {
     );
     const data = await res.json();
     
-    // Add a small delay for smoother transition
+    // Small delay for a smoother transition effect
     setTimeout(() => {
       jokeDiv.style.opacity = '1';
       jokeDiv.innerHTML = `${data.setup}<br><strong>${data.punchline}</strong>`;
@@ -30,5 +30,5 @@ async function getJoke() {
 
 jokeButton.addEventListener('click', getJoke);
 
-// Load a joke when the page loads
+// Loading an initial joke when the page loads
 window.onload = getJoke;
